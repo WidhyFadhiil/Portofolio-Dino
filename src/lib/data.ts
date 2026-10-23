@@ -1,18 +1,18 @@
 export const profile = {
   name: "Widhy Fadhiil Aldino",
-  short: "Widhy",
-  role: "Backend Engineer",
-  email: "widhy.aldino@devmail.com",
-  location: "Jakarta, Indonesia (UTC+7)",
-  github: "https://github.com",
+  short: "Dino",
+  role: "Backend Engineer/Web Developer",
+  email: "widhyfadhiilaldino1907@gmail.com",
+  location: "Jakarta, Indonesia",
+  github: "https://github.com/WidhyFadhiil",
   linkedin: "https://linkedin.com",
   x: "https://x.com",
-  whatsapp: "https://wa.me/",
+  whatsapp: "https://wa.me/0895386891729",
   // Ganti dengan file CV asli di folder /public
   cvUrl: "/cv-widhy.pdf",
   // Ganti dengan foto lokal di /public (mis. "/profile.jpg") agar tidak bergantung pada URL Stitch
   photo:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB0raeYSDLcWFHjYc0v45BRjQm1HkENQ6MqqzD2d62NrOHQBmK_ujHwlrrTTcONMVril0dclm2ne90kJ7ERyhQQNdFgfc4TMy-6gT-gHKm7wvzsY_op479ybYSbfpZBUPl4bbs4dlPMN8sA6g3BbkMCaJlPsHqIVCqbwHoG2uyqPDjJQx3q5pdwD0ILf756Zj5kJkZ7iaYzyC81zhFtB6shch7la-_sEKtGIRgPjwp02EUVBwZG3RD8",
+    "/Profile.png",
 };
 
 export const navLinks = [
@@ -39,12 +39,11 @@ export const stack = [
     badge: "Primary Focus",
     icon: "dns",
     tone: "primary",
-    desc: "High throughput services, gRPC, REST APIs, asynchronous task processing.",
+    desc: "High throughput services, REST APIs, asynchronous task processing.",
     items: [
-      ["Go (Golang)", "Daily Driver"],
-      ["Node.js / Express", "Production Standard"],
-      ["Laravel (PHP)", "Enterprise Ready"],
-      ["Python & NestJS", "Specialized"],
+      ["Code Igniter (PHP)", "Daily Driver"],
+      ["Node.js", "Production Standard"],
+      ["Laravel (PHP) ", "Enterprise Ready"],
     ],
   },
   {
@@ -55,9 +54,8 @@ export const stack = [
     desc: "Relational indexing, in-memory stores, distributed transactions, search engines.",
     items: [
       ["PostgreSQL", "Daily Driver"],
-      ["Redis & Streams", "Production Standard"],
       ["MySQL", "Advanced"],
-      ["Elasticsearch / Mongo", "Search & Doc"],
+      ["MongoDB", "Search & Doc"],
     ],
   },
   {
@@ -74,7 +72,7 @@ export const stack = [
     ],
   },
   {
-    title: "DevOps & Cloud",
+    title: "DevOps",
     badge: "Infra",
     icon: "cloud",
     tone: "tertiary",
@@ -82,15 +80,15 @@ export const stack = [
     items: [
       ["Docker & Compose", "Daily Driver"],
       ["AWS (ECS, S3, RDS)", "Production Standard"],
-      ["Kubernetes & Helm", "Proficient"],
-      ["GitHub Actions & Linux", "Automated"],
+      ["Kubernetes & Helm", "Production Standard"],
+      ["GitHub Actions", "Automated"],
     ],
   },
 ] as const;
 
 export const marqueeTech = [
-  "Go", "Node.js", "Laravel", "PostgreSQL", "Redis", "Kafka", "gRPC", "Docker", "Kubernetes", "AWS",
-  "TypeScript", "Next.js", "Tailwind", "GitHub Actions", "Prometheus", "OpenTelemetry",
+  "HTML", "Node.js", "Laravel", "PostgreSQL", "CSS", "Boostrap", "Docker", "Kubernetes", "AWS",
+  "TypeScript", "Next.js", "Tailwind", "GitHub Actions", "VITE", "MYSQL",
 ];
 
 export type Category = "backend" | "fullstack" | "opensource";
@@ -123,17 +121,17 @@ export const projects: {
 
 export const experience = [
   {
-    role: "Senior Backend Engineer", company: "FinTech Velocity Lab", period: "2022 — Present", tone: "primary",
+    role: "Junior Backend Engineer", company: "FinTech Velocity Lab", period: "2023 — Present", tone: "primary",
     desc: "Spearheaded the core transactional payment routing microservice handling over $2.5M in daily volume. Re-engineered cache validation loops with Redis cluster and Go channels, which slashed p99 payment gateway latency by 45%. Conducted architectural reviews and mentored 4 junior and mid-level backend developers.",
-    tags: ["Go (Golang)", "PostgreSQL", "Kafka", "Kubernetes"],
+    tags: ["PostgreSQL", "Kubernetes"],
   },
   {
-    role: "Full Stack Developer", company: "HyperScale Digital", period: "2020 — 2022", tone: "secondary",
+    role: "Full Stack Developer", company: "HyperScale Digital", period: "2024 — Present", tone: "secondary",
     desc: "Architected and shipped multi-tenant enterprise SaaS applications using Laravel and Next.js. Optimized complex database queries and automated background queues, yielding a 60% boost in overall API throughput and stellar Google Core Web Vitals across client portals.",
-    tags: ["Laravel", "Next.js / TypeScript", "MySQL", "Tailwind CSS"],
+    tags: ["Code Igniter", "Next.js / TypeScript", "MySQL", "Tailwind CSS"],
   },
   {
-    role: "Software Engineer", company: "DataForge Labs", period: "2018 — 2020", tone: "outline",
+    role: "Software Engineer", company: "DataForge Labs", period: "2024 — Present", tone: "outline",
     desc: "Designed secure RESTful APIs for analytics aggregation. Introduced automated Dockerized CI/CD pipelines, accelerating release cycles from 2 full days down to 30 automated minutes with zero downtime blue/green rollouts.",
     tags: ["Node.js", "Docker", "GitHub Actions", "MongoDB"],
   },
