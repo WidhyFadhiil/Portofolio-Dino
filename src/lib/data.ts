@@ -128,7 +128,7 @@ export const experience = [
     tags: ["Creativity", "Innovation", "Student Association"],
   },
   {
-    role: "B.Sc. Student, Information Systems & Technology", company: "Cyber University (Universitas Siber Indonesia)", period: "Semester 5", tone: "primary",
+    role: "Student, Information Systems & Technology", company: "Cyber University (Universitas Siber Indonesia)", period: "Semester 5", tone: "primary",
     desc: "Studying Sistem dan Teknologi Informasi while building web projects with Laravel, CodeIgniter, MySQL, and Next.js.",
     tags: ["Laravel", "CodeIgniter", "Next.js", "MySQL"],
   },
