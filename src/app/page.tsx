@@ -13,7 +13,6 @@ import { TechStack } from "@/components/sections/TechStack";
 import { Projects } from "@/components/sections/Projects";
 import { Activity } from "@/components/sections/Activity";
 import { Experience } from "@/components/sections/Experience";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { marqueeTech } from "@/lib/data";
 
@@ -34,7 +33,6 @@ export default function Home() {
         <Projects />
         <Activity />
         <Experience />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

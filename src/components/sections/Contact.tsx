@@ -40,9 +40,12 @@ export function Contact() {
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    const fd = new FormData(form);
+    const subject = `[Portfolio] ${fd.get("type")} — ${fd.get("name")}`;
+    const body = `${fd.get("message")}\n\n— ${fd.get("name")} (${fd.get("email")})`;
     setStatus("sending");
-    // TODO: ganti dengan Server Action / API route (mis. Resend, Nodemailer) untuk kirim email sungguhan.
     setTimeout(() => {
+      window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       form.reset();
       setStatus("sent");
       setSparks(Array.from({ length: 22 }, (_, i) => {
@@ -56,10 +59,10 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
-      <Heading label="[ 07 // GET IN TOUCH ]" parts={[{ text: "Let's build something exceptional together." }]} />
+      <Heading label="[ 06 // GET IN TOUCH ]" parts={[{ text: "Let's build something great together." }]} />
       <Reveal delay={0.2}>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-on-surface-variant">
-          Have a project in mind, need backend architecture consultation, or want to discuss full-time roles? Drop me a message.
+          Looking for an intern or junior web developer, have a project idea, or just want to collaborate? Drop me a message.
         </p>
       </Reveal>
 
@@ -84,7 +87,7 @@ export function Contact() {
               </button>
             </div>
             {[
-              { href: profile.whatsapp, icon: "chat", label: "WhatsApp Direct", hint: "Instant Chat", tone: "text-tertiary", hover: "hover:border-tertiary" },
+              { href: profile.whatsapp, icon: "chat", label: "WhatsApp", hint: "Chat", tone: "text-tertiary", hover: "hover:border-tertiary" },
               { href: profile.linkedin, icon: "briefcase", label: "LinkedIn Profile", hint: "Connect", tone: "text-primary", hover: "hover:border-primary" },
             ].map((l) => (
               <motion.a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 8 }} className={`group flex min-h-14 items-center justify-between rounded-xl border border-outline-variant bg-surface-high p-3.5 transition-colors ${l.hover}`}>
@@ -105,16 +108,16 @@ export function Contact() {
               <Field label="Your Name" id="name"><input id="name" name="name" required placeholder="Alex Rivera" autoComplete="name" className={inputCls} /></Field>
               <Field label="Your Email" id="email"><input id="email" name="email" type="email" required placeholder="alex@company.com" autoComplete="email" className={inputCls} /></Field>
             </div>
-            <Field label="Engagement Type & Budget" id="type">
+            <Field label="What can I help with?" id="type">
               <select id="type" name="type" className={inputCls}>
-                <option value="backend">Backend & API Architecture ($3,000 - $10,000+)</option>
-                <option value="fullstack">Full-Stack Application Development</option>
-                <option value="consultation">Technical Consultation & System Audit</option>
-                <option value="fulltime">Full-Time Senior Engineering Role</option>
+                <option value="Internship / Junior Role">Internship / Junior Role</option>
+                <option value="Freelance Web Project">Freelance Web Project</option>
+                <option value="Collaboration">Collaboration / Open Source</option>
+                <option value="Just saying hi">Just saying hi</option>
               </select>
             </Field>
             <Field label="Project Details" id="message">
-              <textarea id="message" name="message" required rows={4} placeholder="Tell me about your product requirements, current architecture, and timeline..." className={`${inputCls} resize-none`} />
+              <textarea id="message" name="message" required rows={4} placeholder="Tell me a bit about your project or opportunity..." className={`${inputCls} resize-none`} />
             </Field>
 
             <div className="relative mt-2">
@@ -129,7 +132,7 @@ export function Contact() {
                   <motion.span key={status} initial={{ y: 22, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -22, opacity: 0 }} transition={{ duration: 0.22, ease }} className="flex items-center gap-2">
                     {status === "idle" && (<>Send Message <Icon name="rocket" className="size-[18px]" /></>)}
                     {status === "sending" && (<><Icon name="loader" className="size-[18px] animate-spin" /> Sending...</>)}
-                    {status === "sent" && (<>Sent Successfully! <Icon name="check" className="size-[18px]" /></>)}
+                    {status === "sent" && (<>Email Ready! <Icon name="check" className="size-[18px]" /></>)}
                   </motion.span>
                 </AnimatePresence>
               </motion.button>
@@ -150,7 +153,7 @@ export function Contact() {
                 {status === "sent" && (
                   <motion.div initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden">
                     <div className="flex items-center gap-2 rounded-lg border border-tertiary/40 bg-tertiary-container/20 p-3 font-mono text-[11px] text-tertiary">
-                      <Icon name="check" className="size-[18px]" /> Thank you! Your message has been sent. Widhy will reply within 24 hours.
+                      <Icon name="check" className="size-[18px]" /> Your email app should open with the message ready. Just press send!
                     </div>
                   </motion.div>
                 )}

@@ -1,15 +1,16 @@
 export const profile = {
   name: "Widhy Fadhiil Aldino",
-  short: "Dino",
-  role: "Backend Engineer/Web Developer",
+  short: "Widhy",
+  role: "Web Developer",
+  campus: "Cyber University",
   email: "widhyfadhiilaldino1907@gmail.com",
-  location: "Jakarta, Indonesia",
+  location: "Indonesia",
+  githubUser: "WidhyFadhiil",
   github: "https://github.com/WidhyFadhiil",
-  linkedin: "https://linkedin.com",
-  x: "https://x.com",
-  whatsapp: "https://wa.me/0895386891729",
-  // Ganti dengan file CV asli di folder /public
-  cvUrl: "/cv-widhy.pdf",
+  linkedin: "https://linkedin.com/in/widhy-fadhiil-aldino-b1b306409",
+  whatsapp: "https://wa.me/62895386891729",
+  // Taruh file CV di /public lalu isi, mis. "/cv-widhy.pdf". Kosong = tombol CV diganti "Get in Touch".
+  cvUrl: "",
   // Ganti dengan foto lokal di /public (mis. "/profile.jpg") agar tidak bergantung pada URL Stitch
   photo:
     "/Profile.png",
@@ -20,127 +21,117 @@ export const navLinks = [
   { id: "tech-stack", label: "Tech Stack" },
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "testimonials", label: "Testimonials" },
   { id: "contact", label: "Contact" },
 ];
 
 export const stats = [
-  { label: "Years of Experience", tag: "EXP", value: 5, suffix: "+", icon: "history", tone: "secondary" },
-  { label: "Production Projects", tag: "SHIP", value: 42, suffix: "+", icon: "rocket", tone: "primary" },
-  { label: "Reliability Track Record", tag: "SLA", value: 99.99, suffix: "%", decimals: 2, icon: "verified", tone: "tertiary" },
-  { label: "Monthly API Requests", tag: "RPS", value: 15, suffix: "M+", icon: "dataset", tone: "primary" },
+  { label: "Current Semester", tag: "SEM", value: 5, suffix: "", icon: "history", tone: "secondary" },
+  { label: "Projects Built", tag: "PROJ", value: 2, suffix: "+", icon: "rocket", tone: "primary" },
+  { label: "Technologies Learned", tag: "TECH", value: 11, suffix: "", icon: "dataset", tone: "tertiary" },
+  { label: "Orgs & Committees", tag: "ORG", value: 4, suffix: "", icon: "verified", tone: "primary" },
 ] as const;
 
-export const aboutChips = ["Microservices", "Event Queues", "PostgreSQL Tuning", "Docker & K8s", "Clean Architecture"];
+export const aboutChips = ["Laravel", "CodeIgniter", "Next.js & React", "MySQL", "Game Dev (Godot)", "Scrum & Teamwork"];
 
 export const stack = [
   {
-    title: "Backend Engineering",
-    badge: "Primary Focus",
-    icon: "dns",
-    tone: "primary",
-    desc: "High throughput services, REST APIs, asynchronous task processing.",
-    items: [
-      ["Code Igniter (PHP)", "Daily Driver"],
-      ["Node.js", "Production Standard"],
-      ["Laravel (PHP) ", "Enterprise Ready"],
-    ],
-  },
-  {
-    title: "Databases & Caching",
-    badge: "Data Tier",
-    icon: "database",
-    tone: "secondary",
-    desc: "Relational indexing, in-memory stores, distributed transactions, search engines.",
-    items: [
-      ["PostgreSQL", "Daily Driver"],
-      ["MySQL", "Advanced"],
-      ["MongoDB", "Search & Doc"],
-    ],
-  },
-  {
-    title: "Frontend & UI",
+    title: "Frontend",
     badge: "Web Client",
     icon: "devices",
     tone: "primary",
-    desc: "Type-safe component architectures, responsive layouts, API consumer interfaces.",
+    desc: "Responsive, accessible interfaces built with modern JavaScript tooling.",
     items: [
-      ["TypeScript", "Daily Driver"],
-      ["Next.js & React", "Production Standard"],
-      ["Tailwind CSS", "Daily Driver"],
-      ["HTML5 / CSS3 / Vite", "Standard"],
+      ["HTML5 & CSS3", "Comfortable"],
+      ["JavaScript", "Comfortable"],
+      ["React", "Comfortable"],
+      ["Next.js", "Comfortable"],
     ],
   },
   {
-    title: "DevOps",
-    badge: "Infra",
+    title: "Backend & Database",
+    badge: "Server Side",
+    icon: "dns",
+    tone: "secondary",
+    desc: "Full-stack web apps with MVC frameworks and relational databases.",
+    items: [
+      ["Laravel (PHP)", "Used in projects"],
+      ["CodeIgniter", "Used in projects"],
+      ["MySQL", "Used in projects"],
+    ],
+  },
+  {
+    title: "Tools & Deployment",
+    badge: "Workflow",
     icon: "cloud",
     tone: "tertiary",
-    desc: "Container orchestration, CI/CD automated deployment, observability.",
+    desc: "Version control, hosting, and containers to ship and share work.",
     items: [
-      ["Docker & Compose", "Daily Driver"],
-      ["AWS (ECS, S3, RDS)", "Production Standard"],
-      ["Kubernetes & Helm", "Production Standard"],
-      ["GitHub Actions", "Automated"],
+      ["Git & GitHub", "Comfortable"],
+      ["Vercel", "Used in projects"],
+      ["Docker", "Learning"],
+    ],
+  },
+  {
+    title: "More Languages",
+    badge: "Beyond Web",
+    icon: "pkg",
+    tone: "primary",
+    desc: "Programming foundations and game development experiments.",
+    items: [
+      ["Java", "Comfortable"],
+      ["Godot Engine", "Comfortable"],
     ],
   },
 ] as const;
 
 export const marqueeTech = [
-  "HTML", "Node.js", "Laravel", "PostgreSQL", "CSS", "Boostrap", "Docker", "Kubernetes", "AWS",
-  "TypeScript", "Next.js", "Tailwind", "GitHub Actions", "VITE", "MYSQL",
+  "HTML", "CSS", "JavaScript", "React", "Next.js", "Laravel", "CodeIgniter", "MySQL", "Java", "Godot", "Docker", "GitHub", "Vercel",
 ];
 
-export type Category = "backend" | "fullstack" | "opensource";
+export type Category = "laravel" | "codeigniter";
 
 export const projects: {
   title: string; kind: string; year: string; category: Category; tone: "primary" | "secondary" | "tertiary";
-  desc: string; tags: string[]; linkLabel: string; repoLabel: string;
+  desc: string; tags: string[]; demo?: string; repo?: string;
 }[] = [
   {
-    title: "ApexCommerce Concurrency Engine", kind: "Full-Stack E-Commerce", year: "2024", category: "fullstack", tone: "secondary",
-    desc: "Multi-tenant backend platform engineered to sustain 10,000 concurrent checkout requests per second with distributed lock management, Stripe webhooks reconciliation, and Next.js headless storefront.",
-    tags: ["Go", "PostgreSQL", "Next.js", "Stripe API"], linkLabel: "Live Demo", repoLabel: "GitHub",
+    title: "MICU (Mitra Cuci)", kind: "Laundry Marketplace", year: "2025", category: "laravel", tone: "secondary",
+    desc: "Aplikasi satu pintu untuk menemukan dan memesan jasa laundry terbaik di sekitarmu tanpa perlu repot keluar rumah.",
+    tags: ["Laravel", "MySQL", "Web App"], demo: "https://mitracuci.vercel.app/",
   },
   {
-    title: "PulseMetrics Real-Time Analytics API", kind: "Backend / Telemetry", year: "2023", category: "backend", tone: "primary",
-    desc: "Time-series ingestion service built over TimescaleDB and Redis Pub/Sub with secure WebSockets streaming real-time server vitals to enterprise monitoring dashboards.",
-    tags: ["Node.js", "TimescaleDB", "WebSockets", "Docker"], linkLabel: "Live Demo", repoLabel: "GitHub",
-  },
-  {
-    title: "CloudGate Microservice API Gateway", kind: "API Gateway", year: "2023", category: "backend", tone: "tertiary",
-    desc: "High-performance reverse proxy featuring token bucket rate-limiting, dynamic JWT authentication, and OpenTelemetry request tracing with less than 2ms average overhead.",
-    tags: ["Go", "gRPC", "Redis", "JWT"], linkLabel: "Live Demo", repoLabel: "GitHub",
-  },
-  {
-    title: "DevCraft CLI Developer Suite", kind: "Open Source Tooling", year: "2024", category: "opensource", tone: "primary",
-    desc: "Open source command-line utility automating local Kubernetes container provisioning, database mock seeders, and API regression tests directly inside terminal workflows.",
-    tags: ["Go / Cobra", "Docker Engine", "Bash", "Cross-platform"], linkLabel: "Package Docs", repoLabel: "420+ Stars",
+    title: "LoakIN", kind: "Second-hand Marketplace", year: "2025", category: "codeigniter", tone: "primary",
+    desc: "Platform one-stop shop untuk jual-beli barang bekas berkualitas sekaligus memesan jasa reparasi agar barang awet kembali.",
+    tags: ["CodeIgniter", "MySQL", "Web App"], repo: "https://github.com/WidhyFadhiil/LoakIN",
   },
 ];
 
 export const experience = [
   {
-    role: "Junior Backend Engineer", company: "FinTech Velocity Lab", period: "2023 — Present", tone: "primary",
-    desc: "Spearheaded the core transactional payment routing microservice handling over $2.5M in daily volume. Re-engineered cache validation loops with Redis cluster and Go channels, which slashed p99 payment gateway latency by 45%. Conducted architectural reviews and mentored 4 junior and mid-level backend developers.",
-    tags: ["PostgreSQL", "Kubernetes"],
+    role: "Head of Public Relations & Administration", company: "Decompe 5.0 × Skillclass", period: "2026 — Present", tone: "primary",
+    desc: "Leading the Public Relations & Administration division: coordinating communication, partnerships, and administrative flow for the event team.",
+    tags: ["Leadership", "Public Relations", "Administration"],
   },
   {
-    role: "Full Stack Developer", company: "HyperScale Digital", period: "2024 — Present", tone: "secondary",
-    desc: "Architected and shipped multi-tenant enterprise SaaS applications using Laravel and Next.js. Optimized complex database queries and automated background queues, yielding a 60% boost in overall API throughput and stellar Google Core Web Vitals across client portals.",
-    tags: ["Code Igniter", "Next.js / TypeScript", "MySQL", "Tailwind CSS"],
+    role: "Organizing Chair", company: "Scrum Project Management Webinar & Workshop", period: "2026", tone: "secondary",
+    desc: "Chaired the organizing committee of a webinar and workshop on Scrum Project Management, coordinating the team from planning to event day.",
+    tags: ["Event Management", "Scrum", "Teamwork"],
   },
   {
-    role: "Software Engineer", company: "DataForge Labs", period: "2024 — Present", tone: "outline",
-    desc: "Designed secure RESTful APIs for analytics aggregation. Introduced automated Dockerized CI/CD pipelines, accelerating release cycles from 2 full days down to 30 automated minutes with zero downtime blue/green rollouts.",
-    tags: ["Node.js", "Docker", "GitHub Actions", "MongoDB"],
+    role: "Member, Program Development Division", company: "UKM Coding Cyber University", period: "2025 — 2026", tone: "tertiary",
+    desc: "Part of the program development division of the university coding club, involved in software development activities and projects with fellow members.",
+    tags: ["Software Development", "Collaboration"],
   },
-];
-
-export const testimonials = [
-  { quote: "Widhy transformed our payment system architecture. His depth of knowledge in Go concurrency and database locking saved us from severe downtime during our biggest flash sale to date.", name: "Marcus Kramer", role: "CTO @ FinTech Velocity Lab", initials: "MK", tone: "primary" },
-  { quote: "Rarely do you find an engineer who can write rock-solid backend services and simultaneously respect clean UI nuances. Widhy communicates with crystal clarity and delivers ahead of milestones.", name: "Aria Lestari", role: "VP of Eng @ HyperScale Digital", initials: "AL", tone: "secondary" },
-  { quote: "Widhy rebuilt our automated CI/CD flow from the ground up. Not only did deployments become predictable, but our developer happiness index skyrocketed. Absolute pleasure to work with!", name: "David Hartono", role: "Engineering Director @ DataForge", initials: "DH", tone: "tertiary" },
+  {
+    role: "Member, Creativity & Innovation Division", company: "HIMASTI Cyber University", period: "2025 — 2026", tone: "outline",
+    desc: "Member of the Creativity & Innovation division of the Information Systems and Technology student association.",
+    tags: ["Creativity", "Innovation", "Student Association"],
+  },
+  {
+    role: "B.Sc. Student, Information Systems & Technology", company: "Cyber University (Universitas Siber Indonesia)", period: "Semester 5", tone: "primary",
+    desc: "Studying Sistem dan Teknologi Informasi while building web projects with Laravel, CodeIgniter, MySQL, and Next.js.",
+    tags: ["Laravel", "CodeIgniter", "Next.js", "MySQL"],
+  },
 ];
 
 export const toneText = { primary: "text-primary", secondary: "text-secondary", tertiary: "text-tertiary", outline: "text-outline" } as const;

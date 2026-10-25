@@ -15,13 +15,15 @@ const code: Token[] = [
   { text: " = {\n  name: " },
   { text: "'Widhy Fadhiil Aldino'", className: "text-tertiary" },
   { text: ",\n  role: " },
-  { text: "'Backend & Cloud Systems'", className: "text-primary-fixed" },
-  { text: ",\n  focus: [" },
-  { text: "'Distributed Systems'", className: "text-secondary" },
+  { text: "'Web Developer'", className: "text-primary-fixed" },
+  { text: ",\n  stack: [" },
+  { text: "'Laravel'", className: "text-secondary" },
   { text: ", " },
-  { text: "'APIs'", className: "text-secondary" },
+  { text: "'Next.js'", className: "text-secondary" },
+  { text: ", " },
+  { text: "'MySQL'", className: "text-secondary" },
   { text: "],\n  status: " },
-  { text: "'Ready for high-impact work'", className: "text-tertiary" },
+  { text: "'Open for internships'", className: "text-tertiary" },
   { text: "\n};" },
 ];
 
@@ -80,7 +82,7 @@ export function Hero() {
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-tertiary opacity-75" />
                   <span className="relative inline-flex size-2.5 rounded-full bg-tertiary" />
                 </span>
-                <span className="font-mono text-[11px] font-semibold tracking-wide text-tertiary">Available for freelance &amp; full-time</span>
+                <span className="font-mono text-[11px] font-semibold tracking-wide text-tertiary">Open for internships &amp; junior roles</span>
               </div>
             </Intro>
 
@@ -90,15 +92,15 @@ export function Hero() {
               delay={0.2}
               className="font-display text-[2.1rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem]"
               parts={[
-                { text: "I architect resilient " },
-                { text: "backend systems", className: "text-flow" },
-                { text: " and fast, scalable web applications." },
+                { text: "I build clean, responsive " },
+                { text: "web applications", className: "text-flow" },
+                { text: " and keep getting better at it." },
               ]}
             />
 
             <Intro delay={0.9}>
               <p className="max-w-xl text-base leading-relaxed text-on-surface-variant">
-                Senior-minded Backend &amp; Web Developer specializing in Go, Node.js, Laravel, distributed microservices, and high-throughput APIs paired with refined web interfaces.
+                Information Systems &amp; Technology undergraduate at Cyber University, building web apps with Laravel, CodeIgniter, MySQL, and Next.js. Active in campus communities as a team player and leader.
               </p>
             </Intro>
 
@@ -110,8 +112,8 @@ export function Hero() {
                 </a>
               </Magnetic>
               <Magnetic>
-                <a href={profile.cvUrl} download className="inline-flex items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-6 py-3 font-mono text-[13px] transition-colors hover:border-primary hover:bg-surface-high">
-                  <Icon name="file" className="size-4" /> Download CV
+                <a href={profile.cvUrl || "#contact"} {...(profile.cvUrl ? { download: true } : {})} className="inline-flex items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-6 py-3 font-mono text-[13px] transition-colors hover:border-primary hover:bg-surface-high">
+                  <Icon name={profile.cvUrl ? "file" : "mail"} className="size-4" /> {profile.cvUrl ? "Download CV" : "Get in Touch"}
                 </a>
               </Magnetic>
             </Intro>
@@ -120,7 +122,6 @@ export function Hero() {
               <span className="uppercase tracking-wider text-outline">Connect •</span>
               <a href={profile.github} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-center gap-1.5 transition-colors hover:text-primary"><Icon name="terminal" className="size-4" />GitHub</a>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-center gap-1.5 transition-colors hover:text-primary"><Icon name="briefcase" className="size-4" />LinkedIn</a>
-              <a href={profile.x} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-center gap-1.5 transition-colors hover:text-primary"><Icon name="hash" className="size-4" />X / Twitter</a>
               <button onClick={copy} className="relative flex min-h-9 items-center gap-1.5 transition-colors hover:text-secondary" title="Klik untuk menyalin email">
                 <Icon name="copy" className="size-4" />
                 {profile.email}
@@ -163,13 +164,13 @@ export function Hero() {
               <motion.div style={{ x: chipX, y: chipY }} className="absolute -right-3 -top-4 hidden sm:block">
                 <div className="flex animate-float items-center gap-1.5 rounded-lg border border-outline-variant bg-surface-high px-3 py-1.5 shadow-lg">
                   <Icon name="verified" className="size-4 text-tertiary" />
-                  <span className="font-mono text-[11px] font-semibold">99.98% uptime SLA</span>
+                  <span className="font-mono text-[11px] font-semibold">Semester 5 · SisTI</span>
                 </div>
               </motion.div>
               <motion.div style={{ x: chipX, y: chipY }} className="absolute -right-8 top-1/2 hidden sm:block">
                 <div className="flex animate-float items-center gap-1.5 rounded-lg border border-outline-variant bg-surface-high px-3 py-1.5 shadow-lg [animation-delay:-3s]">
-                  <Icon name="gauge" className="size-4 text-secondary" />
-                  <span className="font-mono text-[11px] font-semibold">&lt; 45ms API p99</span>
+                  <Icon name="rocket" className="size-4 text-secondary" />
+                  <span className="font-mono text-[11px] font-semibold">2 projects built</span>
                 </div>
               </motion.div>
             </motion.div>

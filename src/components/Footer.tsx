@@ -8,7 +8,6 @@ export function Footer() {
   const links = [
     { href: profile.github, icon: "terminal", label: "GitHub" },
     { href: profile.linkedin, icon: "briefcase", label: "LinkedIn" },
-    { href: profile.x, icon: "hash", label: "X" },
     { href: `mailto:${profile.email}`, icon: "mail", label: "Email" },
   ];
   return (
@@ -21,7 +20,7 @@ export function Footer() {
               <span className="font-mono text-[13px] font-semibold">&lt;{profile.short} /&gt;</span>
               <span className="text-xs text-on-surface-variant">© {new Date().getFullYear()} {profile.name}. All rights reserved.</span>
             </div>
-            <p className="font-mono text-[11px] text-outline">Built with Next.js 16, Motion, Tailwind &amp; Go</p>
+            <p className="font-mono text-[11px] text-outline">Built with Next.js 16, Motion &amp; Tailwind CSS</p>
           </div>
           <div className="flex items-center gap-5">
             {links.map((l) => (

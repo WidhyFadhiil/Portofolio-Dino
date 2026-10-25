@@ -11,8 +11,8 @@ export function TechStack() {
     <section id="tech-stack" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
       <Heading
         label="[ 02 // TECH STACK ]"
-        parts={[{ text: "Core Technologies & Toolchain" }]}
-        note="Curated toolkit battle-tested in high-concurrency environments and real-world production."
+        parts={[{ text: "Technologies I Build With" }]}
+        note="Tools I use in coursework and personal projects, plus what I am learning next."
       />
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {stack.map((c, i) => (
@@ -48,7 +48,7 @@ export function TechStack() {
                   className="flex items-center justify-between gap-2 rounded bg-surface-low p-2"
                 >
                   <span className="font-mono text-[13px] font-medium">{name}</span>
-                  <span className={`text-right font-mono text-[11px] ${level === "Daily Driver" ? "text-tertiary" : "text-outline"}`}>{level}</span>
+                  <span className={`text-right font-mono text-[11px] ${level === "Used in projects" ? "text-tertiary" : "text-outline"}`}>{level}</span>
                 </motion.div>
               ))}
             </div>

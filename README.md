@@ -10,16 +10,18 @@ npm run dev      # http://localhost:3000
 npm run build && npm start
 ```
 
-## Yang perlu kamu ganti
+## Yang perlu kamu cek / ganti
 
-Semua konten ada di satu file: `src/lib/data.ts` (nama, email, link sosial, proyek, pengalaman, testimoni).
+Semua konten ada di satu file: `src/lib/data.ts`.
 
-- **Foto profil**: simpan file ke `public/profile.jpg`, lalu ubah `profile.photo` menjadi `"/profile.jpg"`.
-  (URL bawaan dari Stitch bisa kedaluwarsa. Jika gagal dimuat, otomatis tampil inisial "WA".)
-- **CV**: taruh `cv-widhy.pdf` di folder `public/` (atau ubah `profile.cvUrl`).
-- **Form kontak**: saat ini simulasi. Ganti `submit()` di `src/components/sections/Contact.tsx`
-  dengan Server Action / API route (mis. Resend atau Nodemailer).
-- **Link GitHub/LinkedIn/X/WhatsApp**: ubah di `data.ts`.
+- **Foto profil**: simpan ke `public/profile.jpg`, lalu ubah `profile.photo` menjadi `"/profile.jpg"`.
+- **CV**: taruh PDF di `public/` lalu isi `profile.cvUrl` (mis. `"/cv-widhy.pdf"`). Selama kosong, tombolnya otomatis menjadi "Get in Touch".
+- **Level skill**: label di `stack` (Comfortable / Used in projects / Learning) bisa kamu sesuaikan.
+- **Proyek baru**: tambah objek di `projects`. Isi `demo` dan/atau `repo` sesuai link yang ada.
+- **Link repo MICU**: belum ada, jadi tombolnya mengarah ke profil GitHub. Isi `repo` pada proyek MICU jika sudah ada.
+- **Testimoni**: dihapus karena belum ada. Kalau nanti ada, tambahkan section baru.
+- **Form kontak**: saat dikirim akan membuka aplikasi email dengan pesan terisi (`mailto:`). Untuk kirim langsung dari server, ganti `submit()` di `Contact.tsx` dengan Server Action atau API route.
+- **Section GitHub**: angka repo/stars/followers diambil otomatis dari GitHub (cache 1 jam). Jika gagal, angkanya disembunyikan.
 
 ## Peta animasi
 
@@ -33,8 +35,8 @@ Semua konten ada di satu file: `src/lib/data.ts` (nama, email, link sosial, proy
 | Marquee yang bereaksi pada kecepatan scroll | `ui/VelocityMarquee.tsx` |
 | Teks per kata, teks menyala saat scroll, magnetic, spotlight+tilt, count-up | `ui/motion.tsx` |
 | Hero: 3D tilt, parallax, kode mengetik | `sections/Hero.tsx` |
-| Terminal live + grafik hidup | `sections/Projects.tsx` |
-| Grid kontribusi bergelombang | `sections/Activity.tsx` |
+| Bingkai browser + kartu proyek berfilter | `sections/Projects.tsx` |
+| Statistik GitHub asli + kartu repo | `sections/Activity.tsx` |
 | Garis timeline tergambar saat scroll | `sections/Experience.tsx` |
 | Tombol kirim + confetti | `sections/Contact.tsx` |
 

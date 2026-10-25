@@ -9,7 +9,7 @@ import { Heading } from "./Heading";
 export function About() {
   return (
     <section id="about" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
-      <Heading label="[ 01 // ABOUT ME ]" parts={[{ text: "Engineering robust foundations for modern products." }]} />
+      <Heading label="[ 01 // ABOUT ME ]" parts={[{ text: "Building practical web apps, one project at a time." }]} />
       <div className="mt-12 grid items-start gap-10 lg:grid-cols-12">
         <div className="flex flex-col gap-6 lg:col-span-7">
           <ScrollText
@@ -17,13 +17,13 @@ export function About() {
             parts={[
               { text: "Hello! I'm " },
               { text: "Widhy Fadhiil Aldino", className: "font-semibold text-primary" },
-              { text: ", a backend software engineer who bridges high-throughput infrastructure with seamless web experiences. Over the past 5+ years, I have architected distributed payment pipelines, event-driven microservices, and secure REST/gRPC interfaces that reliably process millions of monthly operations." },
+              { text: ", an Information Systems and Technology undergraduate (semester 5) at Cyber University who enjoys turning everyday problems into web apps people can actually use. I build with Laravel, CodeIgniter, MySQL, and Next.js, from a laundry-booking platform to a second-hand marketplace." },
             ]}
           />
           <ScrollText
             className="text-lg leading-relaxed text-on-surface-variant"
             parts={[
-              { text: "I believe in pragmatic craftsmanship: zero boilerplate bloat, resilient database schemas, and observable telemetry. When building web platforms, I leverage modern toolchains—connecting robust Go and Node backends to responsive TypeScript and Next.js interfaces." },
+              { text: "Beyond code, I collaborate and lead in campus communities: HIMASTI, the UKM Coding program development division, and as organizing chair of a Scrum Project Management webinar. Right now I am exploring Docker and looking for internship and junior web developer opportunities." },
             ]}
           />
           <motion.div
@@ -65,7 +65,7 @@ export function About() {
                 <span className="font-mono text-[11px] text-outline">{s.tag}</span>
               </div>
               <div className="font-display text-3xl font-bold">
-                <CountUp value={s.value} suffix={s.suffix} decimals={"decimals" in s ? s.decimals : 0} />
+                <CountUp value={s.value} suffix={s.suffix} />
               </div>
               <p className="mt-1 font-mono text-[11px] text-on-surface-variant">{s.label}</p>
             </SpotlightCard>

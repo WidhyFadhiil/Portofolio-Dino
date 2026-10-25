@@ -7,9 +7,9 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakart
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Widhy Fadhiil Aldino — Backend Engineer",
+  title: "Widhy Fadhiil Aldino — Web Developer",
   description:
-    "Portfolio Widhy Fadhiil Aldino, backend & web developer: Go, Node.js, Laravel, microservices, dan Next.js.",
+    "Portfolio Widhy Fadhiil Aldino, Web Developer & mahasiswa Sistem dan Teknologi Informasi di Cyber University: Laravel, CodeIgniter, Next.js, dan MySQL.",
 };
 
 export const viewport: Viewport = { themeColor: "#10131a", colorScheme: "dark" };
