@@ -76,7 +76,7 @@ export function Preloader() {
           </div>
           <div className="mt-10 w-full max-w-md">
             <div className="mb-2 flex items-end justify-between font-mono">
-              <span className="text-[11px] text-outline">loading portfolio</span>
+              <span className="text-[11px] text-outline">memuat portofolio</span>
               <span className="font-display text-5xl font-bold tabular-nums text-on-surface">
                 {progress}
                 <span className="text-xl text-primary">%</span>

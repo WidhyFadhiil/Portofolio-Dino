@@ -10,9 +10,9 @@ export function TechStack() {
   return (
     <section id="tech-stack" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
       <Heading
-        label="[ 02 // TECH STACK ]"
-        parts={[{ text: "Technologies I Build With" }]}
-        note="Tools I use in coursework and personal projects, plus what I am learning next."
+        label="[ 02 // TEKNOLOGI ]"
+        parts={[{ text: "Teknologi yang Saya Pakai" }]}
+        note="Alat yang saya pakai di perkuliahan dan proyek pribadi, plus yang sedang saya pelajari."
       />
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {stack.map((c, i) => (
@@ -48,7 +48,7 @@ export function TechStack() {
                   className="flex items-center justify-between gap-2 rounded bg-surface-low p-2"
                 >
                   <span className="font-mono text-[13px] font-medium">{name}</span>
-                  <span className={`text-right font-mono text-[11px] ${level === "Used in projects" ? "text-tertiary" : "text-outline"}`}>{level}</span>
+                  <span className={`text-right font-mono text-[11px] ${level === "Dipakai di proyek" ? "text-tertiary" : "text-outline"}`}>{level}</span>
                 </motion.div>
               ))}
             </div>

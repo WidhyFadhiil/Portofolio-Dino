@@ -13,73 +13,73 @@ export const profile = {
   cvUrl: "",
   // Ganti dengan foto lokal di /public (mis. "/profile.jpg") agar tidak bergantung pada URL Stitch
   photo:
-    "/Profile.png",
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuB0raeYSDLcWFHjYc0v45BRjQm1HkENQ6MqqzD2d62NrOHQBmK_ujHwlrrTTcONMVril0dclm2ne90kJ7ERyhQQNdFgfc4TMy-6gT-gHKm7wvzsY_op479ybYSbfpZBUPl4bbs4dlPMN8sA6g3BbkMCaJlPsHqIVCqbwHoG2uyqPDjJQx3q5pdwD0ILf756Zj5kJkZ7iaYzyC81zhFtB6shch7la-_sEKtGIRgPjwp02EUVBwZG3RD8",
 };
 
 export const navLinks = [
-  { id: "about", label: "About" },
-  { id: "tech-stack", label: "Tech Stack" },
-  { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
-  { id: "contact", label: "Contact" },
+  { id: "about", label: "Tentang" },
+  { id: "tech-stack", label: "Teknologi" },
+  { id: "projects", label: "Proyek" },
+  { id: "experience", label: "Pengalaman" },
+  { id: "contact", label: "Kontak" },
 ];
 
 export const stats = [
-  { label: "Current Semester", tag: "SEM", value: 5, suffix: "", icon: "history", tone: "secondary" },
-  { label: "Projects Built", tag: "PROJ", value: 2, suffix: "+", icon: "rocket", tone: "primary" },
-  { label: "Technologies Learned", tag: "TECH", value: 11, suffix: "", icon: "dataset", tone: "tertiary" },
-  { label: "Orgs & Committees", tag: "ORG", value: 4, suffix: "", icon: "verified", tone: "primary" },
+  { label: "Semester Saat Ini", tag: "SEM", value: 5, suffix: "", icon: "history", tone: "secondary" },
+  { label: "Proyek Dibuat", tag: "PROJ", value: 2, suffix: "+", icon: "rocket", tone: "primary" },
+  { label: "Teknologi Dipelajari", tag: "TECH", value: 11, suffix: "", icon: "dataset", tone: "tertiary" },
+  { label: "Organisasi & Kepanitiaan", tag: "ORG", value: 5, suffix: "", icon: "verified", tone: "primary" },
 ] as const;
 
-export const aboutChips = ["Laravel", "CodeIgniter", "Next.js & React", "MySQL", "Game Dev (Godot)", "Scrum & Teamwork"];
+export const aboutChips = ["Laravel", "CodeIgniter", "Next.js & React", "MySQL", "Game Dev (Godot)", "Scrum & Kerja Tim"];
 
 export const stack = [
   {
     title: "Frontend",
-    badge: "Web Client",
+    badge: "Sisi Klien",
     icon: "devices",
     tone: "primary",
-    desc: "Responsive, accessible interfaces built with modern JavaScript tooling.",
+    desc: "Antarmuka yang responsif dan nyaman dipakai dengan tooling JavaScript modern.",
     items: [
-      ["HTML5 & CSS3", "Comfortable"],
-      ["JavaScript", "Comfortable"],
-      ["React", "Comfortable"],
-      ["Next.js", "Comfortable"],
+      ["HTML5 & CSS3", "Nyaman dipakai"],
+      ["JavaScript", "Nyaman dipakai"],
+      ["React", "Nyaman dipakai"],
+      ["Next.js", "Nyaman dipakai"],
     ],
   },
   {
     title: "Backend & Database",
-    badge: "Server Side",
+    badge: "Sisi Server",
     icon: "dns",
     tone: "secondary",
-    desc: "Full-stack web apps with MVC frameworks and relational databases.",
+    desc: "Aplikasi web full-stack dengan framework MVC dan database relasional.",
     items: [
-      ["Laravel (PHP)", "Used in projects"],
-      ["CodeIgniter", "Used in projects"],
-      ["MySQL", "Used in projects"],
+      ["Laravel (PHP)", "Dipakai di proyek"],
+      ["CodeIgniter", "Dipakai di proyek"],
+      ["MySQL", "Dipakai di proyek"],
     ],
   },
   {
     title: "Tools & Deployment",
-    badge: "Workflow",
+    badge: "Alur Kerja",
     icon: "cloud",
     tone: "tertiary",
-    desc: "Version control, hosting, and containers to ship and share work.",
+    desc: "Version control, hosting, dan container untuk merilis serta membagikan karya.",
     items: [
-      ["Git & GitHub", "Comfortable"],
-      ["Vercel", "Used in projects"],
-      ["Docker", "Learning"],
+      ["Git & GitHub", "Nyaman dipakai"],
+      ["Vercel", "Dipakai di proyek"],
+      ["Docker", "Sedang belajar"],
     ],
   },
   {
-    title: "More Languages",
-    badge: "Beyond Web",
+    title: "Bahasa Lainnya",
+    badge: "Di Luar Web",
     icon: "pkg",
     tone: "primary",
-    desc: "Programming foundations and game development experiments.",
+    desc: "Dasar pemrograman dan eksperimen pengembangan game.",
     items: [
-      ["Java", "Comfortable"],
-      ["Godot Engine", "Comfortable"],
+      ["Java", "Nyaman dipakai"],
+      ["Godot Engine", "Nyaman dipakai"],
     ],
   },
 ] as const;
@@ -95,12 +95,12 @@ export const projects: {
   desc: string; tags: string[]; demo?: string; repo?: string;
 }[] = [
   {
-    title: "MICU (Mitra Cuci)", kind: "Laundry Marketplace", year: "2025", category: "laravel", tone: "secondary",
+    title: "MICU (Mitra Cuci)", kind: "Marketplace Jasa Laundry", year: "2025", category: "laravel", tone: "secondary",
     desc: "Aplikasi satu pintu untuk menemukan dan memesan jasa laundry terbaik di sekitarmu tanpa perlu repot keluar rumah.",
     tags: ["Laravel", "MySQL", "Web App"], demo: "https://mitracuci.vercel.app/",
   },
   {
-    title: "LoakIN", kind: "Second-hand Marketplace", year: "2025", category: "codeigniter", tone: "primary",
+    title: "LoakIN", kind: "Marketplace Barang Bekas", year: "2025", category: "codeigniter", tone: "primary",
     desc: "Platform one-stop shop untuk jual-beli barang bekas berkualitas sekaligus memesan jasa reparasi agar barang awet kembali.",
     tags: ["CodeIgniter", "MySQL", "Web App"], repo: "https://github.com/WidhyFadhiil/LoakIN",
   },
@@ -108,29 +108,39 @@ export const projects: {
 
 export const experience = [
   {
-    role: "Head of Public Relations & Administration", company: "Decompe 5.0 × Skillclass", period: "2026 — Present", tone: "primary",
-    desc: "Leading the Public Relations & Administration division: coordinating communication, partnerships, and administrative flow for the event team.",
-    tags: ["Leadership", "Public Relations", "Administration"],
+    role: "Ketua Divisi Public Relations & Administrasi", company: "Decompe 5.0 × Skillclass", period: "2026 — Sekarang", tone: "primary",
+    desc: "Memimpin divisi Public Relations & Administrasi: mengoordinasikan komunikasi, kemitraan, dan alur administrasi tim acara.",
+    tags: ["Kepemimpinan", "Public Relations", "Administrasi"],
   },
   {
-    role: "Organizing Chair", company: "Scrum Project Management Webinar & Workshop", period: "2026", tone: "secondary",
-    desc: "Chaired the organizing committee of a webinar and workshop on Scrum Project Management, coordinating the team from planning to event day.",
-    tags: ["Event Management", "Scrum", "Teamwork"],
+    role: "Ketua Pelaksana", company: "Webinar & Workshop Scrum Project Management", period: "2026", tone: "secondary",
+    desc: "Memimpin kepanitiaan webinar dan workshop Scrum Project Management, mengoordinasikan tim dari perencanaan hingga hari acara.",
+    tags: ["Manajemen Acara", "Scrum", "Kerja Tim"],
   },
   {
-    role: "Member, Program Development Division", company: "UKM Coding Cyber University", period: "2025 — 2026", tone: "tertiary",
-    desc: "Part of the program development division of the university coding club, involved in software development activities and projects with fellow members.",
-    tags: ["Software Development", "Collaboration"],
+    role: "Anggota Divisi Program Development", company: "UKM Coding Cyber University", period: "2025 — 2026", tone: "tertiary",
+    desc: "Bagian dari divisi program development UKM Coding kampus, terlibat dalam kegiatan dan proyek pengembangan perangkat lunak bersama anggota lain.",
+    tags: ["Pengembangan Software", "Kolaborasi"],
   },
   {
-    role: "Member, Creativity & Innovation Division", company: "HIMASTI Cyber University", period: "2025 — 2026", tone: "outline",
-    desc: "Member of the Creativity & Innovation division of the Information Systems and Technology student association.",
-    tags: ["Creativity", "Innovation", "Student Association"],
+    role: "Anggota Divisi Kreasi dan Inovasi", company: "HIMASTI Cyber University", period: "2025 — 2026", tone: "outline",
+    desc: "Anggota divisi Kreasi dan Inovasi di himpunan mahasiswa Sistem dan Teknologi Informasi.",
+    tags: ["Kreativitas", "Inovasi", "Organisasi Mahasiswa"],
   },
   {
-    role: "Student, Information Systems & Technology", company: "Cyber University (Universitas Siber Indonesia)", period: "Semester 5", tone: "primary",
-    desc: "Studying Sistem dan Teknologi Informasi while building web projects with Laravel, CodeIgniter, MySQL, and Next.js.",
+    role: "Anggota Divisi Acara", company: "Decompe 4.0 × Skillclass", period: "2025", tone: "primary",
+    desc: "Bergabung di divisi acara pada Decompe 4.0 × Skillclass, membantu perencanaan dan pelaksanaan kegiatan.",
+    tags: ["Acara", "Kepanitiaan", "Kerja Tim"],
+  },
+  {
+    role: "Mahasiswa Sistem dan Teknologi Informasi", company: "Cyber University (Universitas Siber Indonesia)", period: "Semester 5", tone: "secondary",
+    desc: "Menempuh studi Sistem dan Teknologi Informasi sambil membangun proyek web dengan Laravel, CodeIgniter, MySQL, dan Next.js.",
     tags: ["Laravel", "CodeIgniter", "Next.js", "MySQL"],
+  },
+  {
+    role: "Siswa Rekayasa Perangkat Lunak (RPL)", company: "SMK Prestasi Prima", period: "2022 — 2024", tone: "tertiary",
+    desc: "Mempelajari dasar pemrograman dan pengembangan perangkat lunak di jurusan Rekayasa Perangkat Lunak.",
+    tags: ["Pemrograman", "RPL", "Dasar Web"],
   },
 ];
 

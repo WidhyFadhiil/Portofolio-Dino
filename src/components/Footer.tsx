@@ -18,9 +18,9 @@ export function Footer() {
           <div className="flex flex-col items-center gap-1 md:items-start">
             <div className="flex items-center gap-2">
               <span className="font-mono text-[13px] font-semibold">&lt;{profile.short} /&gt;</span>
-              <span className="text-xs text-on-surface-variant">© {new Date().getFullYear()} {profile.name}. All rights reserved.</span>
+              <span className="text-xs text-on-surface-variant">© {new Date().getFullYear()} {profile.name}. Hak cipta dilindungi.</span>
             </div>
-            <p className="font-mono text-[11px] text-outline">Built with Next.js 16, Motion &amp; Tailwind CSS</p>
+            <p className="font-mono text-[11px] text-outline">Dibuat dengan Next.js 16, Motion &amp; Tailwind CSS</p>
           </div>
           <div className="flex items-center gap-5">
             {links.map((l) => (
@@ -31,7 +31,7 @@ export function Footer() {
           </div>
           <Magnetic>
             <a href="#top" className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-3 font-mono text-[11px] text-on-surface-variant transition-colors hover:border-primary hover:text-on-surface">
-              <Icon name="arrowUp" className="size-4" /> Back to Top
+              <Icon name="arrowUp" className="size-4" /> Kembali ke Atas
             </a>
           </Magnetic>
         </div>

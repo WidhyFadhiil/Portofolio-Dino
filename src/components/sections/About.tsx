@@ -9,21 +9,21 @@ import { Heading } from "./Heading";
 export function About() {
   return (
     <section id="about" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
-      <Heading label="[ 01 // ABOUT ME ]" parts={[{ text: "Building practical web apps, one project at a time." }]} />
+      <Heading label="[ 01 // TENTANG SAYA ]" parts={[{ text: "Membangun aplikasi web yang berguna, satu proyek demi satu proyek." }]} />
       <div className="mt-12 grid items-start gap-10 lg:grid-cols-12">
         <div className="flex flex-col gap-6 lg:col-span-7">
           <ScrollText
             className="text-lg leading-relaxed text-on-surface-variant"
             parts={[
-              { text: "Hello! I'm " },
+              { text: "Halo! Saya " },
               { text: "Widhy Fadhiil Aldino", className: "font-semibold text-primary" },
-              { text: ", an Information Systems and Technology undergraduate (semester 5) at Cyber University who enjoys turning everyday problems into web apps people can actually use. I build with Laravel, CodeIgniter, MySQL, and Next.js, from a laundry-booking platform to a second-hand marketplace." },
+              { text: ", mahasiswa Sistem dan Teknologi Informasi (semester 5) di Cyber University yang suka mengubah masalah sehari-hari menjadi aplikasi web yang benar-benar dipakai orang. Saya membangun dengan Laravel, CodeIgniter, MySQL, dan Next.js, mulai dari platform pemesanan laundry sampai marketplace barang bekas." },
             ]}
           />
           <ScrollText
             className="text-lg leading-relaxed text-on-surface-variant"
             parts={[
-              { text: "Beyond code, I collaborate and lead in campus communities: HIMASTI, the UKM Coding program development division, and as organizing chair of a Scrum Project Management webinar. Right now I am exploring Docker and looking for internship and junior web developer opportunities." },
+              { text: "Di luar coding, saya berkolaborasi dan memimpin di komunitas kampus: HIMASTI, divisi program development UKM Coding, hingga menjadi ketua pelaksana webinar Scrum Project Management. Saat ini saya sedang belajar Docker dan mencari kesempatan magang maupun posisi junior web developer." },
             ]}
           />
           <motion.div

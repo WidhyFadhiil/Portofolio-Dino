@@ -70,11 +70,11 @@ export function Navbar() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-tertiary opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-tertiary" />
             </span>
-            <span className="font-mono text-[11px] text-on-surface-variant">Available</span>
+            <span className="font-mono text-[11px] text-on-surface-variant">Tersedia</span>
           </div>
           <Magnetic strength={0.25}>
             <a href="#contact" className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-container to-secondary px-4 py-2 font-mono text-[13px] font-semibold text-on-primary-container transition-shadow hover:shadow-[0_0_22px_rgba(124,131,255,0.55)]">
-              Hire Me
+              Hubungi Saya
             </a>
           </Magnetic>
           <div className="relative hidden size-8 overflow-hidden rounded-full border border-outline-variant sm:block">
