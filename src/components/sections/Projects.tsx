@@ -8,7 +8,7 @@ import { SpotlightCard, ease } from "@/components/ui/motion";
 import { Heading } from "./Heading";
 
 const filters: { id: "all" | Category; label: string }[] = [
-  { id: "all", label: "Semua" },
+  { id: "all", label: "All" },
   { id: "laravel", label: "Laravel" },
   { id: "codeigniter", label: "CodeIgniter" },
 ];
@@ -33,7 +33,7 @@ function BrowserFrame({ url }: { url: string }) {
         </div>
         <div className="absolute inset-0 grid place-items-center bg-surface-lowest/70 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
           <span className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary-container to-secondary px-4 py-2 font-mono text-[13px] font-semibold text-on-primary-container">
-            <Icon name="external" className="size-4" /> Buka Demo Live
+            <Icon name="external" className="size-4" /> Open Live Demo
           </span>
         </div>
       </div>
@@ -50,8 +50,8 @@ export function Projects() {
   return (
     <section id="projects" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-        <Heading label="[ 03 // PROYEK ]" parts={[{ text: "Proyek Pilihan" }]} />
-        <div role="tablist" aria-label="Filter proyek" className="flex flex-wrap gap-1 self-start rounded-lg border border-outline-variant bg-surface-container p-1">
+        <Heading label="[ 03 // PROJECTS ]" parts={[{ text: "Selected Projects" }]} />
+        <div role="tablist" aria-label="Filter projects" className="flex flex-wrap gap-1 self-start rounded-lg border border-outline-variant bg-surface-container p-1">
           {filters.map((f) => (
             <button key={f.id} role="tab" aria-selected={filter === f.id} onClick={() => setFilter(f.id)} className={`relative min-h-10 rounded px-3 font-mono text-[11px] transition-colors ${filter === f.id ? "font-semibold text-on-primary-container" : "text-on-surface-variant hover:text-on-surface"}`}>
               {filter === f.id && <motion.span layoutId="filter-pill" transition={{ type: "spring", stiffness: 400, damping: 30 }} className="absolute inset-0 rounded bg-primary-container" />}
@@ -69,7 +69,7 @@ export function Projects() {
                 <div className="grid items-center gap-8 lg:grid-cols-12">
                   <div className="flex flex-col gap-4 lg:col-span-6">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded border border-tertiary/40 bg-tertiary-container/30 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-tertiary">Proyek Unggulan</span>
+                      <span className="rounded border border-tertiary/40 bg-tertiary-container/30 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-tertiary">Featured Project</span>
                       <span className="font-mono text-[11px] text-outline">{flagship.kind} • {flagship.year}</span>
                     </div>
                     <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{flagship.title}</h3>
@@ -80,7 +80,7 @@ export function Projects() {
                       ))}
                     </div>
                     <div className="flex flex-wrap items-center gap-3 pt-2">
-                      {flagship.demo && <a href={flagship.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-secondary px-4 py-2 font-mono text-[13px] font-semibold text-on-primary-container transition-shadow hover:shadow-[0_0_24px_rgba(125,132,255,0.5)]"><Icon name="external" className="size-4" /> Demo Live</a>}
+                      {flagship.demo && <a href={flagship.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-secondary px-4 py-2 font-mono text-[13px] font-semibold text-on-primary-container transition-shadow hover:shadow-[0_0_24px_rgba(125,132,255,0.5)]"><Icon name="external" className="size-4" /> Live Demo</a>}
                       <a href={flagship.repo ?? profile.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-outline-variant bg-surface-high px-4 py-2 font-mono text-[13px] transition-colors hover:border-primary"><Icon name="terminal" className="size-4" /> GitHub</a>
                     </div>
                   </div>
@@ -118,8 +118,8 @@ export function Projects() {
                   </div>
                 </div>
                 <div className="flex items-center gap-5 border-t border-outline-variant/60 pt-4 font-mono text-[11px]">
-                  {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className={`group flex min-h-9 items-center gap-1.5 ${toneText[p.tone]}`}><Icon name="eye" className="size-4" /><span className="group-hover:underline">Demo Live</span></a>}
-                  <a href={p.repo ?? profile.github} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-center gap-1.5 text-on-surface-variant transition-colors hover:text-on-surface"><Icon name="terminal" className="size-4" />Kode Sumber</a>
+                  {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className={`group flex min-h-9 items-center gap-1.5 ${toneText[p.tone]}`}><Icon name="eye" className="size-4" /><span className="group-hover:underline">Live Demo</span></a>}
+                  <a href={p.repo ?? profile.github} target="_blank" rel="noopener noreferrer" className="flex min-h-9 items-center gap-1.5 text-on-surface-variant transition-colors hover:text-on-surface"><Icon name="terminal" className="size-4" />Source Code</a>
                 </div>
               </SpotlightCard>
             ))}
@@ -139,8 +139,8 @@ export function Projects() {
               className="group flex min-h-[200px] flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-outline-variant bg-surface-container/40 p-6 text-center transition-colors hover:border-primary"
             >
               <Icon name="rocket" className="size-8 text-outline transition-all group-hover:-translate-y-1 group-hover:text-primary" />
-              <span className="font-display text-lg font-semibold">Proyek lainnya segera hadir</span>
-              <span className="font-mono text-[11px] text-on-surface-variant">Ikuti perkembangannya di GitHub →</span>
+              <span className="font-display text-lg font-semibold">More projects coming soon</span>
+              <span className="font-mono text-[11px] text-on-surface-variant">Follow the progress di GitHub →</span>
             </motion.a>
           )}
         </motion.div>

@@ -37,7 +37,7 @@ export function Navbar() {
       className="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/70 backdrop-blur-xl"
     >
       <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between gap-4 px-5 sm:px-8">
-        <a href="#top" className="group flex items-center gap-2.5" aria-label="Kembali ke atas">
+        <a href="#top" className="group flex items-center gap-2.5" aria-label="Back to top">
           <motion.svg whileHover={{ rotate: 360 }} transition={{ duration: 0.8 }} viewBox="0 0 64 64" className="size-8">
             <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#7d84ff" /><stop offset="1" stopColor="#60d5f5" /></linearGradient></defs>
             <rect width="64" height="64" rx="16" fill="#191c23" stroke="#464653" />
@@ -70,11 +70,11 @@ export function Navbar() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-tertiary opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-tertiary" />
             </span>
-            <span className="font-mono text-[11px] text-on-surface-variant">Tersedia</span>
+            <span className="font-mono text-[11px] text-on-surface-variant">Available</span>
           </div>
           <Magnetic strength={0.25}>
             <a href="#contact" className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-container to-secondary px-4 py-2 font-mono text-[13px] font-semibold text-on-primary-container transition-shadow hover:shadow-[0_0_22px_rgba(124,131,255,0.55)]">
-              Hubungi Saya
+              Get in Touch
             </a>
           </Magnetic>
           <div className="relative hidden size-8 overflow-hidden rounded-full border border-outline-variant sm:block">
@@ -82,7 +82,7 @@ export function Navbar() {
           </div>
           <button
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Tutup menu" : "Buka menu"}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             className="grid size-11 place-items-center rounded-lg border border-outline-variant bg-surface-container lg:hidden"
           >

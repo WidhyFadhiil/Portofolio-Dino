@@ -12,19 +12,19 @@ export type GhData = { repos: number; followers: number; stars: number; latest: 
 export function ActivityView({ data }: { data: GhData }) {
   const metrics = data
     ? [
-        { icon: "repos", tone: "text-primary", value: data.repos, label: "Repositori Publik" },
-        { icon: "star", tone: "text-secondary", value: data.stars, label: "Bintang Diterima" },
-        { icon: "chat", tone: "text-tertiary", value: data.followers, label: "Pengikut" },
+        { icon: "repos", tone: "text-primary", value: data.repos, label: "Public Repositories" },
+        { icon: "star", tone: "text-secondary", value: data.stars, label: "Stars Received" },
+        { icon: "chat", tone: "text-tertiary", value: data.followers, label: "Followers" },
       ]
     : [];
 
   return (
     <section id="activity" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-        <Heading label="[ 04 // GITHUB ]" parts={[{ text: "Open Source & Kode" }]} note="Angka langsung dari profil GitHub publik saya." />
+        <Heading label="[ 04 // GITHUB ]" parts={[{ text: "Open Source & Code" }]} note="Angka real-time dari public GitHub profile saya." />
         <Reveal>
           <a href={profile.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-outline-variant bg-surface-container px-4 font-mono text-[11px] transition-colors hover:border-primary">
-            <Icon name="terminal" className="size-4" /> Ikuti @{profile.githubUser} di GitHub
+            <Icon name="terminal" className="size-4" /> Follow @{profile.githubUser} di GitHub
           </a>
         </Reveal>
       </div>
@@ -61,7 +61,7 @@ export function ActivityView({ data }: { data: GhData }) {
                       <span className="flex items-center gap-2 font-mono text-[13px] font-semibold text-primary"><Icon name="repos" className="size-4" />{r.name}</span>
                       <span className="flex items-center gap-1 font-mono text-[11px] text-outline"><Icon name="star" className="size-3.5" />{r.stars}</span>
                     </div>
-                    <p className="line-clamp-2 text-xs leading-relaxed text-on-surface-variant">{r.description ?? "Belum ada deskripsi."}</p>
+                    <p className="line-clamp-2 text-xs leading-relaxed text-on-surface-variant">{r.description ?? "No description yet."}</p>
                     {r.language && <span className="mt-auto w-fit rounded bg-surface-high px-2 py-0.5 font-mono text-[11px]">{r.language}</span>}
                   </a>
                 </SpotlightCard>

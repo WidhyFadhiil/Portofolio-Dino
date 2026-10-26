@@ -13,7 +13,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="relative mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
-      <Heading label="[ 05 // PENDIDIKAN & ORGANISASI ]" parts={[{ text: "Pendidikan & Organisasi" }]} />
+      <Heading label="[ 05 // EDUCATION & ORGANIZATIONS ]" parts={[{ text: "Education & Organizations" }]} />
       <div ref={ref} className="relative mt-14 space-y-14 pl-7 md:pl-10">
         <div aria-hidden className="absolute left-0 top-0 h-full w-px bg-outline-variant/60" />
         <motion.div aria-hidden style={{ scaleY }} className="absolute left-0 top-0 -ml-px h-full w-[3px] origin-top rounded-full bg-gradient-to-b from-primary via-secondary to-tertiary shadow-[0_0_14px_rgba(96,213,245,0.7)]" />

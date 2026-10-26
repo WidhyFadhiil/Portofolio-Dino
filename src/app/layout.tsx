@@ -9,7 +9,7 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 export const metadata: Metadata = {
   title: "Widhy Fadhiil Aldino — Web Developer",
   description:
-    "Portfolio Widhy Fadhiil Aldino, Web Developer & mahasiswa Sistem dan Teknologi Informasi di Cyber University: Laravel, CodeIgniter, Next.js, dan MySQL.",
+    "Portfolio of Widhy Fadhiil Aldino, Web Developer & mahasiswa Sistem dan Teknologi Informasi di Cyber University. Stack: Laravel, CodeIgniter, Next.js, dan MySQL.",
 };
 
 export const viewport: Viewport = { themeColor: "#10131a", colorScheme: "dark" };

@@ -16,7 +16,7 @@ Semua konten ada di satu file: `src/lib/data.ts`.
 
 - **Foto profil**: simpan ke `public/profile.jpg`, lalu ubah `profile.photo` menjadi `"/profile.jpg"`.
 - **CV**: taruh PDF di `public/` lalu isi `profile.cvUrl` (mis. `"/cv-widhy.pdf"`). Selama kosong, tombolnya otomatis menjadi "Get in Touch".
-- **Level skill**: label di `stack` (Comfortable / Used in projects / Learning) bisa kamu sesuaikan.
+- **Level skill**: label di `stack` (`Comfortable` / `Used in projects` / `Learning`; nilai `Used in projects` dipakai untuk warna highlight di `TechStack.tsx`) bisa kamu sesuaikan.
 - **Proyek baru**: tambah objek di `projects`. Isi `demo` dan/atau `repo` sesuai link yang ada.
 - **Link repo MICU**: belum ada, jadi tombolnya mengarah ke profil GitHub. Isi `repo` pada proyek MICU jika sudah ada.
 - **Testimoni**: dihapus karena belum ada. Kalau nanti ada, tambahkan section baru.
