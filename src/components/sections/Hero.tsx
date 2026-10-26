@@ -164,7 +164,7 @@ export function Hero() {
               <motion.div style={{ x: chipX, y: chipY }} className="absolute -right-3 -top-4 hidden sm:block">
                 <div className="flex animate-float items-center gap-1.5 rounded-lg border border-outline-variant bg-surface-high px-3 py-1.5 shadow-lg">
                   <Icon name="verified" className="size-4 text-tertiary" />
-                  <span className="font-mono text-[11px] font-semibold">Semester 5 · SisTI</span>
+                  <span className="font-mono text-[11px] font-semibold">Semester 5 · STI</span>
                 </div>
               </motion.div>
               <motion.div style={{ x: chipX, y: chipY }} className="absolute -right-8 top-1/2 hidden sm:block">
