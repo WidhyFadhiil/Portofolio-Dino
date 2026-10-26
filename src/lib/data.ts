@@ -138,9 +138,9 @@ export const experience = [
     tags: ["Laravel", "CodeIgniter", "Next.js", "MySQL"],
   },
   {
-    role: "Software Engineering (RPL) Student", company: "SMK Prestasi Prima", period: "2022 — 2024", tone: "tertiary",
-    desc: "Belajar programming fundamentals dan software development di jurusan Rekayasa Perangkat Lunak.",
-    tags: ["Programming", "RPL", "Web Basics"],
+    role: "Data Entry (PKL Intern)", company: "PT Pitjarus", period: "2023", tone: "tertiary",
+    desc: "Menjalankan praktik kerja lapangan (PKL) sebagai data entry di PT Pitjarus, menangani input dan pengecekan data dengan teliti.",
+    tags: ["Data Entry", "PKL", "Work Experience"],
   },
 ];
 
