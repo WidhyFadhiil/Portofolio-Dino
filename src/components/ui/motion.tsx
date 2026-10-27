@@ -20,7 +20,7 @@ export type Part = { text: string; className?: string };
 
 /** Muncul saat masuk viewport: fade + naik + blur hilang. */
 export function Reveal({
-  children, className, delay = 0, y = 40, x = 0, blur = 10,
+  children, className, delay = 0, y = 40, x = 0, blur = 6,
 }: { children: ReactNode; className?: string; delay?: number; y?: number; x?: number; blur?: number }) {
   return (
     <motion.div
@@ -43,7 +43,7 @@ export function Intro({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y, scale, filter: "blur(12px)" }}
+      initial={{ opacity: 0, y, scale, filter: "blur(8px)" }}
       animate={ready ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" } : undefined}
       transition={{ duration: 1, ease, delay }}
     >

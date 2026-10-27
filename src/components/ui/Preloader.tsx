@@ -19,9 +19,9 @@ export function Preloader() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const skip =
-      sessionStorage.getItem("intro-seen") === "1" ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let seen = false;
+    try { seen = sessionStorage.getItem("intro-seen") === "1"; } catch {}
+    const skip = seen || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (skip) {
       setVisible(false);
       setReady(true);
@@ -30,14 +30,14 @@ export function Preloader() {
     const root = document.documentElement;
     root.style.overflow = "hidden";
     const start = performance.now();
-    const DURATION = 2300;
+    const DURATION = 1700;
     let raf = 0;
     const tick = (t: number) => {
       const p = Math.min(1, (t - start) / DURATION);
       setProgress(Math.round((1 - Math.pow(1 - p, 3)) * 100));
       if (p < 1) raf = requestAnimationFrame(tick);
       else {
-        sessionStorage.setItem("intro-seen", "1");
+        try { sessionStorage.setItem("intro-seen", "1"); } catch {}
         setVisible(false);
         setTimeout(() => setReady(true), 380);
       }

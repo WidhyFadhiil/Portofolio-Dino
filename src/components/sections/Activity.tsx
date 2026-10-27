@@ -5,7 +5,12 @@ type ApiRepo = { name: string; description: string | null; language: string | nu
 
 async function getGithub(): Promise<GhData> {
   try {
-    const opt = { next: { revalidate: 3600 }, headers: { Accept: "application/vnd.github+json" } };
+    const token = process.env.GITHUB_TOKEN;
+    const opt = {
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(8000),
+      headers: { Accept: "application/vnd.github+json", ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+    };
     const [u, r] = await Promise.all([
       fetch(`https://api.github.com/users/${profile.githubUser}`, opt),
       fetch(`https://api.github.com/users/${profile.githubUser}/repos?per_page=100&sort=updated`, opt),

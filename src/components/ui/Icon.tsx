@@ -1,17 +1,17 @@
 import {
   Activity, ArrowDown, ArrowUp, AtSign, BadgeCheck, Briefcase, Check, ChevronsDown, Cloud, Copy,
-  Database, ExternalLink, Eye, FileText, FolderGit2, GitCommitHorizontal, Hash, History, Loader,
-  MapPin, Menu, MessageCircle, MonitorSmartphone, Package, Rocket, Send, Server, Star, Terminal,
-  TrendingDown, X, Gauge, Mail,
+  ExternalLink, Eye, FileText, FolderGit2, History, Loader,
+  MapPin, Menu, MessageCircle, MonitorSmartphone, Package, Rocket, Server, Star, Terminal,
+  X, Mail,
 } from "lucide-react";
 
 export const icons = {
   activity: Activity, arrowDown: ArrowDown, arrowUp: ArrowUp, atSign: AtSign, verified: BadgeCheck,
   briefcase: Briefcase, check: Check, chevronsDown: ChevronsDown, cloud: Cloud, copy: Copy,
-  database: Database, external: ExternalLink, eye: Eye, file: FileText, repos: FolderGit2,
-  commit: GitCommitHorizontal, hash: Hash, history: History, loader: Loader, pin: MapPin, menu: Menu,
-  chat: MessageCircle, devices: MonitorSmartphone, pkg: Package, rocket: Rocket, send: Send,
-  dns: Server, star: Star, terminal: Terminal, trending: TrendingDown, close: X, gauge: Gauge,
+  external: ExternalLink, eye: Eye, file: FileText, repos: FolderGit2,
+  history: History, loader: Loader, pin: MapPin, menu: Menu,
+  chat: MessageCircle, devices: MonitorSmartphone, pkg: Package, rocket: Rocket,
+  dns: Server, star: Star, terminal: Terminal, close: X,
   mail: Mail, dataset: Activity,
 } as const;
 

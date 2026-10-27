@@ -13,7 +13,7 @@ export const profile = {
   cvUrl: "",
   // Ganti dengan foto lokal di /public (mis. "/profile.jpg") agar tidak bergantung pada URL Stitch
   photo:
-    "/Profile.png",
+    "Profile.png",
 };
 
 export const navLinks = [
